@@ -19,7 +19,7 @@ Durante la práctica se trabajó con una representación simplificada del sistem
 <a id="contenido"></a>
 ## Contenido
 
-1. [Síntesis del trabajo](#resumen)
+1. [Resumen](#resumen)
 2. [Competencia y objetivos](#objetivos)
 3. [Relación con el temario](#temario)
 4. [Representación mecánica y significado fisiológico](#modelo)
@@ -151,8 +151,6 @@ La conexión analizada se compone de los siguientes elementos:
 - La señal de salida $F_s(t)$, medida como el voltaje presente en $C_p$ con respecto a tierra.
 
 Se conserva la polaridad asignada a la fuente $F_0(t)$ en el circuito original. Debido a esa orientación, su aportación aparece con signo negativo al aplicar el principio de superposición.
-
-El desarrollo del circuito y sus simplificaciones se documenta en el **archivo PDF de análisis matemático**.
 
 [Volver al contenido](#contenido)
 
@@ -308,7 +306,7 @@ Los dos polos son números reales negativos, de modo que ambos modelos son estab
 <a id="simulink"></a>
 ## 9. Modelo en Simulink y Simscape
 
-El **Sistema`.slx`** contiene dos subsistemas principales, identificados como **Control** y **Caso**.
+El **`Sistema.slx`** contiene dos subsistemas principales, identificados como **Control** y **Caso**.
 
 | Subsistema | Elementos incluidos |
 |---|---|
@@ -344,7 +342,7 @@ Por lo tanto, dentro del intervalo observado la entrada vale 1 V desde el segund
 <a id="matlab"></a>
 ## 10. Ejecución mediante MATLAB
 
-La parte computacional incluye un **Cid23212187(`.mlx`)**. Este recurso reúne los datos académicos, la ejecución de la simulación y las instrucciones para representar las señales. PDF: **Cid23212187(`.pdf`)**.
+La parte computacional incluye un **(`Cid23212187.mlx`)**. Este recurso reúne los datos académicos, la ejecución de la simulación y las instrucciones para representar las señales. PDF: **(`Cid23212187.pdf`)**.
 
 La simulación puede ejecutarse con la siguiente estructura. Al solicitar el nombre del modelo, se debe escribir el nombre base del archivo de Simulink que se tenga disponible, sin añadir la extensión:
 
@@ -375,7 +373,7 @@ plotsignals(X.t,X.F,X.Fsx,X.Fsy,X.PI)
 
 La figura se presenta con fondo blanco, fuente Times New Roman y la leyenda en la parte superior. El eje horizontal abarca de 0 a 10 s, mientras que el eje vertical representa voltaje en un rango de −0.1 a 1.1 V.
 
-La gráfica puede guardarse como un **impulso_unitario_matlab**, de modo que conserve la calidad al ampliarse.
+La gráfica se guardó como **(`impulso_unitario_matlab.pdf`)**, de modo que conserve la calidad al ampliarse.
 
 [Volver al contenido](#contenido)
 
@@ -436,7 +434,7 @@ La imagen del sintonizador se conserva como evidencia del proceso de ajuste. Cua
 
 Los indicadores anteriores corresponden a la **respuesta ante un escalón evaluada por PID Tuner**. No son mediciones tomadas directamente de la gráfica completa en la que se aplica el pulso rectangular.
 
-La evidencia gráfica del ajuste se entrega como **Controlador PI (`.jpg`)**.
+La evidencia gráfica del ajuste se entrega como **(`Controlador PI.jpg`)**.
 
 [Volver al contenido](#contenido)
 
@@ -471,7 +469,7 @@ El valor aproximado de 0.75 V de la salida sana concuerda con la ganancia estát
 <a id="python"></a>
 ## 13. Desarrollo complementario en Python
 
-Como parte de la entrega se considera un **archivo de código fuente de Python (`.py`)** y la **figura generada por dicho código**. La gráfica debe mostrar las mismas cuatro señales que la comparación de MATLAB: entrada, control, caso y caso con PI.
+Como parte de la entrega se considera un **archivo de código fuente de Python (`Cid23212187.py`)** y la **figura generada por dicho código (`impulso_unitario_python.png`)**. La gráfica debe mostrar las mismas cuatro señales que la comparación de MATLAB: entrada, control, caso y caso con PI.
 
 Para implementar los dos escenarios se utilizan las siguientes funciones de transferencia:
 
@@ -563,17 +561,17 @@ Se recomienda colocar los materiales de la práctica en el directorio principal 
 
 | Tipo de archivo o material | Contenido | Estado de revisión |
 |---|---|---|
-| Análisis matemático (`.pdf`) | Circuito equivalente, superposición, función de transferencia, cálculo del error y análisis de estabilidad | Revisado |
-| Sistema (`.slx`) | Subsistemas de control y caso, circuitos de Simscape y controlador PI | Estructura y parámetros revisados |
-| Cid23212187 (`.mlx`) | Información académica, simulación y generación de gráficas | Revisado |
-| Cid23212187 (`.pdf`) | Versión en PDF del cuaderno computacional | Revisada |
-| impulso_unitario_matlab (`.pdf`) | Señales de entrada, control, caso y caso con PI | Revisada |
-| Controlador PI (`.jpg`) | Parámetros y métricas de desempeño del controlador | Revisada |
-| Cid23212187 (`.py`) | Simulación computacional y generación de la gráfica | Pendiente de incorporar |
-| impulso_unitario_python (`.png`) | Comparación de las señales equivalente a la de MATLAB | Pendiente de incorporar |
-| BioRenderMusculoesquelético (`.png`) | Correspondencia entre los componentes biológicos, mecánicos y eléctricos | Pendiente de incorporar |
-| README (`.md`) | Descripción del trabajo e indicaciones para reproducirlo | Documento actual |
-| Citation (`.cff`) | Datos de autoría y referencia bibliográfica del repositorio | Pendiente de elaborar de acuerdo con el instructivo |
+| (`Análisis matemático.pdf`) | Circuito equivalente, superposición, función de transferencia, cálculo del error y análisis de estabilidad | Revisado |
+| (`Sistema.slx`) | Subsistemas de control y caso, circuitos de Simscape y controlador PI | Estructura y parámetros revisados |
+| (`Cid23212187.mlx`) | Información académica, simulación y generación de gráficas | Revisado |
+| (`Cid23212187.pdf`) | Versión en PDF del cuaderno computacional | Revisada |
+| (`impulso_unitario_matlab.pdf`) | Señales de entrada, control, caso y caso con PI | Revisada |
+| (`Controlador PI.jpg`) | Parámetros y métricas de desempeño del controlador | Revisada |
+| (`Cid23212187.py`) | Simulación computacional y generación de la gráfica | Pendiente de incorporar |
+| (`impulso_unitario_python.png`) | Comparación de las señales equivalente a la de MATLAB | Pendiente de incorporar |
+| (`BioRenderMusculoesquelético.png`) | Correspondencia entre los componentes biológicos, mecánicos y eléctricos | Pendiente de incorporar |
+| (`README.md`) | Descripción del trabajo e indicaciones para reproducirlo | Documento actual |
+| (`Citation.cff`) | Datos de autoría y referencia bibliográfica del repositorio | Pendiente de elaborar de acuerdo con el instructivo |
 
 La revisión descrita se basó en el contenido, la configuración y las figuras disponibles. No significa que se haya vuelto a ejecutar la simulación en MATLAB o Simulink. En caso de cambiar la ubicación de los materiales o reorganizarlos en carpetas, será necesario ajustar las referencias correspondientes dentro de la documentación.
 

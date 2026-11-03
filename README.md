@@ -178,7 +178,7 @@ El valor de resistencia asignado al caso es cien veces superior al utilizado en 
 <a id="matematicas"></a>
 ## 6. Análisis matemático
 
-El procedimiento se desarrolla en el **documento PDF de análisis matemático**. Para obtener la respuesta total se calcula primero el efecto de cada fuente por separado y, al finalizar, se incorpora la relación $F_0=\alpha F$.
+El procedimiento se desarrolla en **Análisis matemático**. Para obtener la respuesta total se calcula primero el efecto de cada fuente por separado y, al finalizar, se incorpora la relación $F_0=\alpha F$.
 
 ### Primera aportación: fuente $F(t)$
 
@@ -246,8 +246,6 @@ Al sustituir los valores de cada escenario se obtienen las siguientes expresione
 | Control | $G_{control}(s)=\dfrac{0.001s+0.75}{0.011s+1}$ |
 | Caso | $G_{caso}(s)=\dfrac{0.1s+0.75}{1.1s+1}$ |
 
-Estos coeficientes son los mismos que se utilizan en los bloques de función de transferencia del **modelo de Simulink (.slx)**.
-
 [Volver al contenido](#contenido)
 
 ---
@@ -310,7 +308,7 @@ Los dos polos son números reales negativos, de modo que ambos modelos son estab
 <a id="simulink"></a>
 ## 9. Modelo en Simulink y Simscape
 
-El **modelo de Simulink en formato `.slx`** contiene dos subsistemas principales, identificados como **Control** y **Caso**.
+El **Sistema`.slx`** contiene dos subsistemas principales, identificados como **Control** y **Caso**.
 
 | Subsistema | Elementos incluidos |
 |---|---|
@@ -346,15 +344,15 @@ Por lo tanto, dentro del intervalo observado la entrada vale 1 V desde el segund
 <a id="matlab"></a>
 ## 10. Ejecución mediante MATLAB
 
-La parte computacional incluye un **cuaderno de MATLAB en formato Live Script (`.mlx`)**. Este recurso reúne los datos académicos, la ejecución de la simulación y las instrucciones para representar las señales. También se contempla su **exportación a PDF (`.pdf`)**.
+La parte computacional incluye un **Cid23212187(`.mlx`)**. Este recurso reúne los datos académicos, la ejecución de la simulación y las instrucciones para representar las señales. PDF: **Cid23212187(`.pdf`)**.
 
 La simulación puede ejecutarse con la siguiente estructura. Al solicitar el nombre del modelo, se debe escribir el nombre base del archivo de Simulink que se tenga disponible, sin añadir la extensión:
 
 ```matlab
 clc; clear; close all; warning('off','all')
 tend = '10';
-modelo = input('Nombre del modelo de Simulink (sin extensión): ','s');
-open_system(modelo)
+file = 'Sistema';
+open_system(file)
 parameters.StopTime = tend;
 parameters.Solver = 'ode15s';
 parameters.MaxStep = '1e-3';
@@ -364,7 +362,7 @@ X = sim(modelo,parameters);
 Para representar los resultados se emplea la función de graficación con las siguientes señales:
 
 ```matlab
-plotsignals(X.t,X.F,X.Fsx,X.Fsy,X.PID)
+plotsignals(X.t,X.F,X.Fsx,X.Fsy,X.PI)
 ```
 
 | Variable | Señal que contiene |
@@ -373,11 +371,11 @@ plotsignals(X.t,X.F,X.Fsx,X.Fsy,X.PID)
 | `X.F` | Señal de entrada $F(t)$ |
 | `X.Fsx` | Respuesta del escenario de control |
 | `X.Fsy` | Respuesta del caso sin controlador |
-| `X.PID` | Salida del caso con PI; se conserva el identificador de variable empleado en el cuaderno |
+| `X.PI` | Salida del caso con PI; se conserva el identificador de variable empleado en el cuaderno |
 
 La figura se presenta con fondo blanco, fuente Times New Roman y la leyenda en la parte superior. El eje horizontal abarca de 0 a 10 s, mientras que el eje vertical representa voltaje en un rango de −0.1 a 1.1 V.
 
-La gráfica puede guardarse como un **documento PDF vectorial**, de modo que conserve la calidad al ampliarse.
+La gráfica puede guardarse como un **impulso_unitario_matlab**, de modo que conserve la calidad al ampliarse.
 
 [Volver al contenido](#contenido)
 
@@ -386,7 +384,7 @@ La gráfica puede guardarse como un **documento PDF vectorial**, de modo que con
 <a id="pi"></a>
 ## 11. Diseño y ajuste del controlador PI
 
-El bloque de control identificado como `PID Controller` se encuentra configurado para funcionar como un controlador **PI** de tiempo continuo y estructura paralela. No se aplica la acción derivativa.
+El bloque de control identificado como `PI Controller` se encuentra configurado para funcionar como un controlador **PI** de tiempo continuo y estructura paralela. No se aplica la acción derivativa.
 
 La respuesta de la condición sana se establece como referencia para el sistema controlado. De esta manera, la señal de error se define como:
 
@@ -438,7 +436,7 @@ La imagen del sintonizador se conserva como evidencia del proceso de ajuste. Cua
 
 Los indicadores anteriores corresponden a la **respuesta ante un escalón evaluada por PID Tuner**. No son mediciones tomadas directamente de la gráfica completa en la que se aplica el pulso rectangular.
 
-La evidencia gráfica del ajuste se entrega como **imagen en formato PNG (`.png`)**.
+La evidencia gráfica del ajuste se entrega como **Controlador PI (`.jpg`)**.
 
 [Volver al contenido](#contenido)
 
@@ -447,7 +445,7 @@ La evidencia gráfica del ajuste se entrega como **imagen en formato PNG (`.png`
 <a id="resultados"></a>
 ## 12. Interpretación de las gráficas de MATLAB
 
-La **gráfica comparativa de MATLAB, en formato PDF**, reúne cuatro señales:
+En **impulso_unitario_matlab**, se reúnen cuatro señales:
 
 | Señal | Estilo utilizado |
 |---|---|
@@ -565,17 +563,17 @@ Se recomienda colocar los materiales de la práctica en el directorio principal 
 
 | Tipo de archivo o material | Contenido | Estado de revisión |
 |---|---|---|
-| Documento PDF de análisis matemático (`.pdf`) | Circuito equivalente, superposición, función de transferencia, cálculo del error y análisis de estabilidad | Revisado |
-| Modelo de Simulink (`.slx`) | Subsistemas de control y caso, circuitos de Simscape y controlador PI | Estructura y parámetros revisados |
-| Cuaderno de MATLAB Live Script (`.mlx`) | Información académica, simulación y generación de gráficas | Revisado |
-| Exportación PDF del cuaderno (`.pdf`) | Versión en PDF del cuaderno computacional | Revisada |
-| Gráfica comparativa de MATLAB (`.pdf`) | Señales de entrada, control, caso y caso con PI | Revisada |
-| Captura de PID Tuner (`.png`) | Parámetros y métricas de desempeño del controlador | Revisada |
-| Código fuente de Python (`.py`) | Simulación computacional y generación de la gráfica | Pendiente de incorporar |
-| Figura generada con Python | Comparación de las señales equivalente a la de MATLAB | Pendiente de incorporar |
-| Ilustración de BioRender | Correspondencia entre los componentes biológicos, mecánicos y eléctricos | Pendiente de incorporar |
-| Documento README en Markdown (`.md`) | Descripción del trabajo e indicaciones para reproducirlo | Documento actual |
-| Archivo de citación (`.cff`) | Datos de autoría y referencia bibliográfica del repositorio | Pendiente de elaborar de acuerdo con el instructivo |
+| Análisis matemático (`.pdf`) | Circuito equivalente, superposición, función de transferencia, cálculo del error y análisis de estabilidad | Revisado |
+| Sistema (`.slx`) | Subsistemas de control y caso, circuitos de Simscape y controlador PI | Estructura y parámetros revisados |
+| Cid23212187 (`.mlx`) | Información académica, simulación y generación de gráficas | Revisado |
+| Cid23212187 (`.pdf`) | Versión en PDF del cuaderno computacional | Revisada |
+| impulso_unitario_matlab (`.pdf`) | Señales de entrada, control, caso y caso con PI | Revisada |
+| Controlador PI (`.jpg`) | Parámetros y métricas de desempeño del controlador | Revisada |
+| Cid23212187 (`.py`) | Simulación computacional y generación de la gráfica | Pendiente de incorporar |
+| impulso_unitario_python (`.png`) | Comparación de las señales equivalente a la de MATLAB | Pendiente de incorporar |
+| BioRenderMusculoesquelético (`.png`) | Correspondencia entre los componentes biológicos, mecánicos y eléctricos | Pendiente de incorporar |
+| README (`.md`) | Descripción del trabajo e indicaciones para reproducirlo | Documento actual |
+| Citation (`.cff`) | Datos de autoría y referencia bibliográfica del repositorio | Pendiente de elaborar de acuerdo con el instructivo |
 
 La revisión descrita se basó en el contenido, la configuración y las figuras disponibles. No significa que se haya vuelto a ejecutar la simulación en MATLAB o Simulink. En caso de cambiar la ubicación de los materiales o reorganizarlos en carpetas, será necesario ajustar las referencias correspondientes dentro de la documentación.
 

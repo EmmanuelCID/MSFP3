@@ -52,8 +52,7 @@ Las implementaciones se realizan mediante ecuaciones y funciones de transferenci
 
 **Alcance:** la práctica se desarrolla exclusivamente mediante experimentación *in silico*. El controlador es de propósito académico y de simulación; no constituye una estrategia terapéutica para tratar la atrofia muscular.
 
-**Palabras clave:** sistema musculoesquelético; analogía fuerza–voltaje; modelo mecánico; atrofia muscular; función de transferencia; PID; MATLAB; Simulink; Simscape Electrical; Python.
-
+**Palabras clave:** sistema musculoesquelético; Controlador PI; Circuito RC; Modelo mecánico.
 [Volver al contenido](#contenido)
 
 ---
@@ -571,7 +570,7 @@ Se recomienda colocar los materiales de la práctica en el directorio principal 
 | [impulso_unitario_python.png](impulso_unitario_python.png) | Comparación de las señales equivalente a la de MATLAB | Pendiente de incorporar |
 | [BioRenderMusculoesquelético](BioRenderMusculoesquelético.png) | Correspondencia entre los componentes biológicos, mecánicos y eléctricos | Pendiente de incorporar |
 | [README.md](README.md) | Descripción del trabajo e indicaciones para reproducirlo | Documento actual |
-| [Citation.cff](Citation.cff) | Datos de autoría y referencia bibliográfica del repositorio | Pendiente de elaborar de acuerdo con el instructivo |
+| [CITATION.cff](CITATION.cff) | Datos de autoría y referencia bibliográfica del repositorio | Pendiente de elaborar de acuerdo con el instructivo |
 
 La revisión descrita se basó en el contenido, la configuración y las figuras disponibles. No significa que se haya vuelto a ejecutar la simulación en MATLAB o Simulink. En caso de cambiar la ubicación de los materiales o reorganizarlos en carpetas, será necesario ajustar las referencias correspondientes dentro de la documentación.
 

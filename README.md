@@ -492,7 +492,7 @@ El análisis de las curvas debe considerar sus amplitudes, la rapidez con que re
 <a id="biorender"></a>
 ## 14. Representación biológica en BioRender
 
-La ilustración elaborada en BioRender sirve para relacionar los elementos físicos del sistema musculoesquelético con los componentes que aparecen en el modelo matemático y eléctrico.
+La ilustración elaborada en BioRender sirve para relacionar los elementos físicos del sistema musculoesquelético con los componentes que aparecen en el modelo matemático y eléctrico. [BioRenderMusculoesquelético](BioRenderMusculoesquelético.png)
 
 | Estructura o característica fisiológica | Elemento del modelo |
 |---|---|

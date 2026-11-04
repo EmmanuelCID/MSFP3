@@ -505,6 +505,9 @@ La ilustración elaborada en BioRender sirve para relacionar los elementos físi
 
 La ilustración debe hacer visibles estas relaciones y distinguir los desplazamientos mecánicos de la salida eléctrica $F_s(t)$, que es la variable empleada en los cálculos y las gráficas. La entrega contempla una **imagen o figura exportada desde BioRender**; esta no se encontraba entre los materiales revisados para la presente versión.
 
+<img width="720" height="504" alt="BioRenderMusculoesquelético" src="https://github.com/user-attachments/assets/baf1119b-5a45-41a9-979e-ade51e39d751" />
+
+
 [Volver al contenido](#contenido)
 
 ---
